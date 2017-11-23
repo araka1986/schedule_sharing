@@ -39,12 +39,14 @@ public class Basics {
 	//in eclipse the program is started by pressing Alt+Shift+X and then J. alternatively, right click on this window, 
 	//choose Run As->Java Application
 	public static void main(String[] args) {
-
-		Player messi = new Player();
+		Player messi = newPlayer("Lionel Messi", 96, 96, 97);
+		Player ronaldo = newPlayer("Christiano Ronaldo", 97, 95, 98);
+		Player sivonjic= newPlayer("Ilija Sivonjic", 42, 0, 23);
+		
 		//we create a new player. it is a completely empty player. it has no name, and all his features are set to zero
 		//in terms of computer memory the above command has requested a small piece of that big field of RAM bytes in which it can 
 		//memorize four items for that player
-		messi.name = "Lionel Messi"; //we assign the name now
+/*		messi.name = "Lionel Messi"; //we assign the name now
 		messi.speed = 90; //and other features
 		messi.dribbling = 99;
 		messi.power = 95;
@@ -63,7 +65,7 @@ public class Basics {
 		sivonjic.dribbling = 0;
 		sivonjic.power = 23;
 		System.out.println(sivonjic);
-
+*/
 		//let's put all the players in the list
 		List<Player> players = Arrays.asList(messi, ronaldo, sivonjic); // (***) 
 		System.out.println(players); //we print all of them, in the same line
@@ -84,8 +86,12 @@ public class Basics {
 
 	}
 
-	private static Player newPlayer() {
+	private static Player newPlayer(String a, int b, int c, int d) {
 		Player player = new Player();
+		player.name = a;
+		player.speed = b;
+		player.dribbling = c;
+		player.power = d;
 		return player;
 	}
 
