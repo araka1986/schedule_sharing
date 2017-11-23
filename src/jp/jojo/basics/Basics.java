@@ -84,4 +84,9 @@ public class Basics {
 
 	}
 
+	private static Player newPlayer() {
+		Player player = new Player();
+		return player;
+	}
+
 }
