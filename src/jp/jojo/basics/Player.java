@@ -2,12 +2,12 @@ package jp.jojo.basics;
 
 class Player {
 
-	String name;
-	int speed;
-	int dribbling;
-	int power;
+	private final String name;
+	private final int speed;
+	private final int dribbling;
+	private final int power;
 	
-	Player(final String name, final int speed, final int dribbling, final int power) {
+	Player(String name, int speed, int dribbling, int power) {
 		this.name = name;
 		this.speed = speed;
 		this.dribbling = dribbling;
