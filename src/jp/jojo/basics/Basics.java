@@ -21,7 +21,7 @@ public class Basics {
 		System.out.println(players); //we print all of them, in the same line
 
 		//now we can do various things, we can sort them by name
-		Collections.sort(players, Comparator.comparing((Player x) -> x.name)); //(***)
+		Collections.sort(players, Comparator.comparing((Player x) -> x.name())); //(***)
 		System.out.println(players);
 
 		//or by speed
