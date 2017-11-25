@@ -12,12 +12,15 @@ public class Basics {
 	 */
 
 	public static void main(String[] args) {
-		Player messi = new Player("Lionel Messi", 96, 96, 97);
-		Player ronaldo = new Player("Christiano Ronaldo", 97, 95, 98);
-		Player sivonjic = new Player("Ilija Sivonjic", 42, 0, 23);
-
+		Player honda= new Player("Keisuke Honda", 50, 60, 97);
+		Player kagawa = new Player("Shinji Kagawa", 97, 95, 80);
+		Player nagatomo = new Player("Yuto Nagatomo", 90, 80, 90);
+		Player kawashima = new Player("Eigo Kawashima", 30, 30, 100);
+		Player oosako = new Player("Yuya Oosako", 90, 99, 88);
+		Player hasebe = new Player("Makoto Hasebe", 80, 80, 80);
+		
 		//let's put all the players in the list
-		List<Player> players = Arrays.asList(messi, ronaldo, sivonjic); // (***) 
+		List<Player> players = Arrays.asList(honda, kagawa, nagatomo, kawashima, oosako, hasebe); // (***) 
 		System.out.println(players); //we print all of them, in the same line
 
 		//now we can do various things, we can sort them by name
@@ -25,20 +28,15 @@ public class Basics {
 		System.out.println(players);
 
 		//or by speed
-		Collections.sort(players, Comparator.comparing((Player x) -> x.speed)); //(***)
+		Collections.sort(players, Comparator.comparing((Player x) -> x.speed())); //(***)
 		System.out.println(players);
 		System.out.println();
 
-		messi.dribbling = 0;
-		messi.power = 0;
-		messi.speed = 0;
 
-		//somebody took away messi's abilities!!!
-
-		System.out.println(messi);
+		System.out.println(honda);
 
 		// sorting again by the speed, messi ends up at the last place!!!
-		Collections.sort(players, Comparator.comparing((Player x) -> x.speed)); //(***)
+		Collections.sort(players, Comparator.comparing((Player x) -> x.speed())); //(***)
 		System.out.println(players);
 
 		// obviously it is not good if any part of the code can modify any object

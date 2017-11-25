@@ -17,6 +17,10 @@ class Player {
 	public String name() {
 		return name;
 	}
+	
+	public int speed() {
+		return speed;
+	}
 
 	public String toString() {
 		return name + " -> speed:" + speed + ", dribbling:" + dribbling + ", power:" + power;
