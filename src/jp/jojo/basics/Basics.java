@@ -18,11 +18,20 @@ public class Basics {
 		Player kawashima = new Player("Eigo Kawashima", 30, 30, 100);
 		Player oosako = new Player("Yuya Oosako", 90, 99, 88);
 		Player hasebe = new Player("Makoto Hasebe", 80, 80, 80);
-		
+		System.out.println(honda);
 		//let's put all the players in the list
-		List<Player> players = Arrays.asList(honda, kagawa, nagatomo, kawashima, oosako, hasebe); // (***) 
-		System.out.println(players); //we print all of them, in the same line
-
+		List<Player> players = Arrays.asList(honda, kagawa); // (***) 
+		List<Player> players2 = Arrays.asList(nagatomo, kawashima); // (***) 		
+		List<Player> players3 = Arrays.asList(oosako, hasebe); // (***) 		
+		
+		Team verdy = new Team(players);
+		Team yokohama = new Team(players2);
+		Team Kashima = new Team(players3);
+		System.out.println(verdy);
+		System.out.println(yokohama);
+		System.out.println(Kashima);
+		
+		
 		//now we can do various things, we can sort them by name
 		Collections.sort(players, Comparator.comparing((Player x) -> x.name())); //(***)
 		System.out.println(players);
