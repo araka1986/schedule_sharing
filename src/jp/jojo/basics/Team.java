@@ -12,8 +12,9 @@ class Team {
 	Team(List<Player> players) {
 		playerCount = players.size();
 	}
-	public int size() {
-		return playerCount;
+	public int playerCount() {
+		Player numberOne = this.getplayerCount(1);
+		return numberOne;
 	}
 
 }
