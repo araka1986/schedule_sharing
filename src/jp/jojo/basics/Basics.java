@@ -27,9 +27,8 @@ public class Basics {
 		Team verdy = new Team(players);
 		Team yokohama = new Team(players2);
 		Team Kashima = new Team(players3);
-		System.out.println(verdy);
-		System.out.println(yokohama);
-		System.out.println(Kashima);
+
+		verdy.getTeam(1);
 		
 		
 		//now we can do various things, we can sort them by name
