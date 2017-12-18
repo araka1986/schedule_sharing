@@ -18,7 +18,7 @@ public class Basics {
 		Player kawashima = new Player("Eigo Kawashima", 30, 30, 100);
 		Player oosako = new Player("Yuya Oosako", 90, 99, 88);
 		Player hasebe = new Player("Makoto Hasebe", 80, 80, 80);
-		System.out.println(honda);
+		//System.out.println(honda);
 		//let's put all the players in the list
 		List<Player> players = Arrays.asList(honda, kagawa); // (***) 
 		List<Player> players2 = Arrays.asList(nagatomo, kawashima); // (***) 		
@@ -28,7 +28,13 @@ public class Basics {
 		Team yokohama = new Team(players2);
 		Team Kashima = new Team(players3);
 		
-		//now we can do various things, we can sort them by name
+		Player numberOne = verdy.getPlayer(0);
+		System.out.println(numberOne);
+		
+		Player numberTwo = yokohama.getPlayer(1);
+		System.out.println(numberTwo);
+
+		/*		//now we can do various things, we can sort them by name
 		Collections.sort(players, Comparator.comparing((Player x) -> x.name())); //(***)
 		System.out.println(players);
 
@@ -45,7 +51,7 @@ public class Basics {
 		System.out.println(players);
 
 		// obviously it is not good if any part of the code can modify any object
-		// what can we do to prevent this from happening? 
+		// what can we do to prevent this from happening? */
 
 	}
 
