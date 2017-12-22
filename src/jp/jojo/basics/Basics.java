@@ -1,8 +1,7 @@
 package jp.jojo.basics;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Basics {
@@ -12,7 +11,7 @@ public class Basics {
 	 */
 
 	public static void main(String[] args) {
-		Player honda= new Player("Keisuke Honda", 50, 60, 97);
+		Player honda = new Player("Keisuke Honda", 50, 60, 97);
 		Player kagawa = new Player("Shinji Kagawa", 97, 95, 80);
 		Player nagatomo = new Player("Yuto Nagatomo", 90, 80, 90);
 		Player kawashima = new Player("Eigo Kawashima", 30, 30, 100);
@@ -23,35 +22,49 @@ public class Basics {
 		List<Player> players = Arrays.asList(honda, kagawa); // (***) 
 		List<Player> players2 = Arrays.asList(nagatomo, kawashima); // (***) 		
 		List<Player> players3 = Arrays.asList(oosako, hasebe); // (***) 		
-		
-		Team verdy = new Team(players);
-		Team yokohama = new Team(players2);
-		Team Kashima = new Team(players3);
-		
+		List<Player> all = new ArrayList<>();
+		all.addAll(players);
+		all.addAll(players2);
+		all.addAll(players3);
+
+		Team verdy = new Team("Verdy", players);
+		Team yokohama = new Team("Yokohama", players2);
+		Team Kashima = new Team("Kashima", players3);
+		Team allStars = new Team("All stars", all);
+
 		Player numberOne = verdy.getPlayer(0);
 		System.out.println(numberOne);
-		
+
 		Player numberTwo = yokohama.getPlayer(1);
 		System.out.println(numberTwo);
 
-		/*		//now we can do various things, we can sort them by name
-		Collections.sort(players, Comparator.comparing((Player x) -> x.name())); //(***)
-		System.out.println(players);
+		System.out.println(verdy.name()); //expected output is Verdy
+		System.out.println(allStars.getPlayer(5)); //expected output is oosako
 
-		//or by speed
-		Collections.sort(players, Comparator.comparing((Player x) -> x.speed())); //(***)
-		System.out.println(players);
 		System.out.println();
 
+		System.out.println();
 
-		System.out.println(honda);
-
-		// sorting again by the speed, messi ends up at the last place!!!
-		Collections.sort(players, Comparator.comparing((Player x) -> x.speed())); //(***)
-		System.out.println(players);
-
-		// obviously it is not good if any part of the code can modify any object
-		// what can we do to prevent this from happening? */
+		/*
+		 * //now we can do various things, we can sort them by name
+		 * Collections.sort(players, Comparator.comparing((Player x) -> x.name())); //(***)
+		 * System.out.println(players);
+		 * 
+		 * //or by speed
+		 * Collections.sort(players, Comparator.comparing((Player x) -> x.speed())); //(***)
+		 * System.out.println(players);
+		 * System.out.println();
+		 * 
+		 * 
+		 * System.out.println(honda);
+		 * 
+		 * // sorting again by the speed, messi ends up at the last place!!!
+		 * Collections.sort(players, Comparator.comparing((Player x) -> x.speed())); //(***)
+		 * System.out.println(players);
+		 * 
+		 * // obviously it is not good if any part of the code can modify any object
+		 * // what can we do to prevent this from happening?
+		 */
 
 	}
 
