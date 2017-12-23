@@ -32,15 +32,12 @@ public class Basics {
 		Team Kashima = new Team("Kashima", players3);
 		Team allStars = new Team("All stars", all);
 
-		Player numberOne = verdy.getPlayer(0);
-		System.out.println(numberOne);
-
-		Player numberTwo = yokohama.getPlayer(1);
-		System.out.println(numberTwo);
-
 		System.out.println(verdy.name()); //expected output is Verdy
 		System.out.println(allStars.getPlayer(5)); //expected output is oosako
-
+		System.out.println(yokohama.name()); //Yokohama
+		System.out.println(yokohama.getPlayer(2)); //Eigo Kawashima
+		System.out.println(Kashima.name()); //Kashima
+		System.out.println(Kashima.getPlayer(1)); //Yuya Oosako
 		System.out.println();
 
 		System.out.println();

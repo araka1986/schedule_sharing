@@ -7,20 +7,22 @@ class Team {
 	// this class models a team (consisting of group of players)
 	// first task is to finish this class (create fields and fill them in constructor) 
 	// and publish the number of players to the outer world
-	Player numberOne;
-	Player numberTwo;
+	Player playerName;
+	String name;
+	List<Player> players;
 	
-	Team(List<Player> players) {
-		this.numberOne = players.get(0);
-		this.numberTwo = players.get(1);
+	Team(String name, List<Player> players) {
+		this.name = name;
+		this.players = players;
 	}
+	
 	public Player getPlayer(int a){
-		if (a == 1) {
-			return numberOne;
-		}
-		else {
-			return numberTwo;
-		}
+		a = a-1;
+		playerName = players.get(a);
+		return playerName;
 	}
 	
+	public String name() {
+		return name;
+	}
 }
