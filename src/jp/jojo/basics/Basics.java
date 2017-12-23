@@ -40,6 +40,10 @@ public class Basics {
 		System.out.println(Kashima.getPlayer(1)); //Yuya Oosako
 		System.out.println();
 
+		Player spy = new Player("Hideaki Higashi", 100, 100, 100);
+		all.add(spy);
+		System.out.println(allStars.getPlayer(7)); //who is this guy, how did he enter all stars????
+
 		System.out.println();
 
 		/*
