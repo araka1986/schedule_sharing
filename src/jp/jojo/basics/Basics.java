@@ -22,11 +22,10 @@ public class Basics {
 		List<Player> players = Arrays.asList(honda, kagawa); // (***) 
 		List<Player> players2 = Arrays.asList(nagatomo, kawashima); // (***) 		
 		List<Player> players3 = Arrays.asList(oosako, hasebe); // (***) 
-		List<Player> all = Arrays.asList(oosako, hasebe,nagatomo, kawashima,honda, kagawa);
-		/*List<Player> all = new ArrayList<>();
+		List<Player> all = new ArrayList<>();
 		all.addAll(players);
 		all.addAll(players2);
-		all.addAll(players3); */
+		all.addAll(players3);
 
 		Team verdy = new Team("Verdy", players);
 		Team yokohama = new Team("Yokohama", players2);
@@ -44,7 +43,6 @@ public class Basics {
 		Player spy = new Player("Hideaki Higashi", 100, 100, 100);
 		all.add(spy);
 		System.out.println(allStars.getPlayer(7)); //who is this guy, how did he enter all stars????
-
 		System.out.println();
 
 		/*

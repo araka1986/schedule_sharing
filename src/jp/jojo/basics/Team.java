@@ -1,5 +1,6 @@
 package jp.jojo.basics;
 
+import java.util.ArrayList;
 import java.util.List;
 
 class Team {
@@ -13,14 +14,17 @@ class Team {
 
 	Team(String name, List<Player> players) {
 		this.name = name;
-		this.players = players;
+		//we make a copy of the original list so if someone changes it from outside, our view 
+		//will not reflect it
+		this.players = new ArrayList<>(players);
 	}
-	
-	public Player getPlayer(int a){
-		a = a-1;
+
+	public Player getPlayer(int a) {
+		a = a - 1;
 		playerName = players.get(a);
 		return playerName;
 	}
+
 	public String name() {
 		return name;
 	}
