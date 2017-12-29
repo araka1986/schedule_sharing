@@ -10,7 +10,7 @@ class Team {
 	Player playerName;
 	String name;
 	List<Player> players;
-	
+
 	Team(String name, List<Player> players) {
 		this.name = name;
 		this.players = players;
@@ -21,7 +21,6 @@ class Team {
 		playerName = players.get(a);
 		return playerName;
 	}
-	
 	public String name() {
 		return name;
 	}

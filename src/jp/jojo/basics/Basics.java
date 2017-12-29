@@ -21,11 +21,12 @@ public class Basics {
 		//let's put all the players in the list
 		List<Player> players = Arrays.asList(honda, kagawa); // (***) 
 		List<Player> players2 = Arrays.asList(nagatomo, kawashima); // (***) 		
-		List<Player> players3 = Arrays.asList(oosako, hasebe); // (***) 		
-		List<Player> all = new ArrayList<>();
+		List<Player> players3 = Arrays.asList(oosako, hasebe); // (***) 
+		List<Player> all = Arrays.asList(oosako, hasebe,nagatomo, kawashima,honda, kagawa);
+		/*List<Player> all = new ArrayList<>();
 		all.addAll(players);
 		all.addAll(players2);
-		all.addAll(players3);
+		all.addAll(players3); */
 
 		Team verdy = new Team("Verdy", players);
 		Team yokohama = new Team("Yokohama", players2);
