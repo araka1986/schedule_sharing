@@ -42,8 +42,12 @@ public class Basics {
 
 		Player spy = new Player("Hideaki Higashi", 100, 100, 100);
 		all.add(spy);
-		System.out.println(allStars.getPlayer(7)); //who is this guy, how did he enter all stars????
+		System.out.println(all);
+		//System.out.println(allStars.getPlayer(7)); //who is this guy, how did he enter all stars????
 		System.out.println();
+		
+		Matches first = new Matches(verdy, yokohama, 0, 1);
+		Matches second = new Matches(yokohama, Kashima, 1, 1);
 
 		/*
 		 * //now we can do various things, we can sort them by name

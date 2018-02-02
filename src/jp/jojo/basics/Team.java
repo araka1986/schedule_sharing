@@ -11,6 +11,7 @@ class Team {
 	Player playerName;
 	String name;
 	List<Player> players;
+	int points;
 
 	Team(String name, List<Player> players) {
 		this.name = name;
@@ -28,4 +29,10 @@ class Team {
 	public String name() {
 		return name;
 	}
+	
+	public int calcPoints(int b) {
+		points = points + b;
+		return points;
+	}
+	
 }
