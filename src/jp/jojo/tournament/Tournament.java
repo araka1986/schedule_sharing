@@ -1,6 +1,7 @@
 package jp.jojo.tournament;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 class Tournament {
@@ -55,4 +56,14 @@ class Tournament {
 		return new TeamStats(team, match, goals);
 	}
 
+	Standings standings() {
+		List<TeamStats> allStats = new ArrayList<>();
+		for (Team team : teams) {
+			TeamStats stats = stats(team);
+			allStats.add(stats);
+		}
+		Collections.sort(allStats);
+		Standings standings = new Standings(allStats);
+		return standings;
+	}
 }
